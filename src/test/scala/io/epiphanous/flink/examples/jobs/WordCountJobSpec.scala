@@ -69,7 +69,6 @@ class WordCountJobSpec extends BasePropSpec {
                    |        config {
                    |          aws.region = us-east-1
                    |          flink.stream.initpos = TRIM_HORIZON
-                   |          bucket.assigner.datetime.format = "yyyy/MM/dd/HH"
                    |        }
                    |      }
                    |    }
@@ -78,6 +77,7 @@ class WordCountJobSpec extends BasePropSpec {
                    |        connector = file
                    |        name = out
                    |        path = "s3://rlyons/examples/word-count/mcyr"
+                   |        bucket.assigner.datetime.format = "yyyy/MM/dd/HH"
                    |      }
                    |    }
                    |  }
