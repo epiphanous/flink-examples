@@ -12,6 +12,7 @@ class WikiEditsJobSpec extends BasePropSpec {
                    |        connector = file
                    |        name = out
                    |        path = "s3://rlyons/examples/word-count/wikipedia-edits"
+                   |        bucket.assigner.datetime.format = "yyyy/MM/dd/HH"
                    |      }
                    |    }
                    |  }

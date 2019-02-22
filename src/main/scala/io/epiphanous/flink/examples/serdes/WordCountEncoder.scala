@@ -9,7 +9,6 @@ import org.apache.flink.api.common.serialization.Encoder
 
 class WordCountEncoder extends Encoder[WordCountEvent] with LazyLogging {
   override def encode(element: WordCountEvent, stream: OutputStream) = {
-    logger.debug(s"-> '$element'")
     stream.write(element.toString.getBytes(StandardCharsets.UTF_8))
     stream.write('\n')
   }
