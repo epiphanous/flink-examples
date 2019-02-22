@@ -1,0 +1,20 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5level %d [%thread] %logger{60} %X{sourceThread} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <logger name="org.apache.flink.streaming.connectors.kinesis" level="DEBUG"/>
+
+    <logger name="com.mdsol" level="DEBUG"/>
+    <logger name="io.epiphanous" level="DEBUG"/>
+
+    <!--for stream.print to show -->
+    <logger name="org.apache.flink.streaming.api.functions.sink.PrintSinkFunction" level="INFO"/>
+
+</configuration>
